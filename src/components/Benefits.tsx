@@ -40,24 +40,24 @@ export default function Benefits() {
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-luxury-gold/5 blur-[150px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-24">
-          <h4 className="text-vibrant-green font-bold text-xs uppercase tracking-[0.4em] mb-4">Valor Tangible</h4>
-          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8 leading-tight">La Inversión Inmobiliaria: <br />Ladrillos que Construyen Libertad</h2>
-          <p className="text-navy/60 text-lg italic font-serif">Seis pilares fundamentales para blindar su futuro y su legado.</p>
+        <div className="text-center mb-20">
+          <h4 className="text-vibrant-green font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Valor Tangible</h4>
+          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">La Inversión Inmobiliaria: <br />Ladrillos que Construyen Libertad</h2>
+          <p className="text-navy/70 text-base italic font-serif">Seis pilares fundamentales para blindar su futuro y su legado.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {pillars.map((pillar, idx) => (
             <motion.div
               key={idx}
               whileHover={{ scale: 1.02 }}
-              className="editorial-card p-12 rounded-[3.5rem] border border-stone/50 hover:border-luxury-gold/50 transition-all flex flex-col items-start"
+              className="editorial-card p-10 lg:p-12 rounded-[3rem] border border-stone/50 hover:border-luxury-gold/50 transition-all flex flex-col items-start"
             >
-              <div className="mb-10 p-6 bg-cream rounded-[2rem] shadow-sm text-luxury-gold">
+              <div className="mb-8 p-6 bg-cream rounded-[1.5rem] shadow-sm text-luxury-gold">
                 {pillar.icon}
               </div>
-              <h3 className="text-3xl font-serif font-bold text-navy mb-6">{pillar.title}</h3>
-              <p className="text-navy/60 leading-relaxed text-lg">
+              <h3 className="text-2xl font-serif font-bold text-navy mb-4">{pillar.title}</h3>
+              <p className="text-navy/70 leading-relaxed text-base">
                 {pillar.desc}
               </p>
             </motion.div>

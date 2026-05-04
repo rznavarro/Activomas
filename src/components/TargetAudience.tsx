@@ -33,11 +33,11 @@ export default function TargetAudience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Perfil de Inversión</h4>
-          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8">
+          <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Perfil de Inversión</h4>
+          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6">
             ¿Es ésta su oportunidad?
           </h2>
-          <p className="text-navy/80 text-lg mb-20 max-w-2xl mx-auto italic font-serif leading-relaxed">
+          <p className="text-navy/80 text-base mb-16 max-w-2xl mx-auto italic font-serif leading-relaxed">
             "La inversión inmobiliaria no es solo para millonarios, es para quienes deciden construir su libertad hoy."
           </p>
         </motion.div>

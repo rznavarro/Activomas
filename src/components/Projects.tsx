@@ -43,10 +43,10 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 text-navy">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
           <div className="max-w-2xl">
-            <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Stock Exclusivo</h4>
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8 leading-tight">Oportunidades de<br />Inversión de Clase Mundial</h2>
-            <p className="text-navy/60 text-lg leading-relaxed">
-              Acuerdos directos con las mejores inmobiliarias de Chile. Precios, descuentos y condiciones que representan la cima del mercado.
+            <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Stock Exclusivo</h4>
+            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">Oportunidades de Inversión <br />de Clase Mundial</h2>
+            <p className="text-navy/70 text-base leading-relaxed">
+              Acuerdos directos con las mejores inmobiliarias. Precios, descuentos y condiciones que representan la cima del mercado.
             </p>
           </div>
           <motion.button 
@@ -71,15 +71,15 @@ export default function Projects() {
                   {project.status}
                 </div>
               </div>
-              <div className="px-2">
-                <div className="flex items-center text-luxury-gold text-[10px] font-black uppercase tracking-[0.2em] mb-3">
-                  <MapPin size={12} className="mr-2" /> {project.comuna}
+                <div className="px-2">
+                <div className="flex items-center text-luxury-gold text-[9px] font-black uppercase tracking-[0.2em] mb-3">
+                  <MapPin size={10} className="mr-2" /> {project.comuna}
                 </div>
-                <h3 className="text-3xl font-serif font-bold text-navy mb-4 group-hover:text-luxury-gold transition-colors">{project.name}</h3>
+                <h3 className="text-2xl font-serif font-bold text-navy mb-4 group-hover:text-luxury-gold transition-colors">{project.name}</h3>
                 
                 <div className="flex items-center gap-3 border-y border-stone/50 py-4 mb-6">
-                  <Train size={16} className="text-navy/30" />
-                  <span className="text-xs font-bold tracking-widest text-navy/60">{project.metro}</span>
+                  <Train size={14} className="text-navy/30" />
+                  <span className="text-[10px] font-bold tracking-widest text-navy/60">{project.metro}</span>
                 </div>
 
                 <div className="flex justify-between items-center">

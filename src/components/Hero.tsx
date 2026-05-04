@@ -20,15 +20,15 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-navy font-serif italic text-xl lg:text-3xl mb-6">
+            <h2 className="text-navy font-serif italic text-lg lg:text-xl mb-6">
               Aprovecha la oportunidad:
             </h2>
-            <h1 className="text-navy font-serif font-bold text-4xl lg:text-8xl leading-[1.1] mb-10 tracking-tight">
-              EN LA VIDA TE <br />ENSEÑARON A <br />TRABAJAR. <br />
-              <span className="text-vibrant-green italic lg:text-navy lg:not-italic">NOSOTROS TE ENSEÑAMOS A INVERTIR.</span>
+            <h1 className="text-navy font-serif font-bold text-4xl lg:text-6xl leading-tight mb-8 tracking-tight uppercase">
+              En la vida te <br />enseñaron a <br />trabajar. <br />
+              <span className="text-luxury-gold italic lg:text-navy lg:not-italic">Nosotros te enseñamos a invertir.</span>
             </h1>
-            <p className="text-navy font-bold text-sm lg:text-base max-w-lg mb-12 uppercase tracking-[0.3em] leading-relaxed">
-              MÁS DE 3.000 INVERSIONISTAS YA ASEGURAN SU JUBILACIÓN, PATRIMONIO Y LIBERTAD FINANCIERA.
+            <p className="text-navy font-bold text-xs lg:text-sm max-w-lg mb-10 uppercase tracking-[0.2em] leading-relaxed">
+              Más de 3.000 inversionistas ya aseguran su jubilación, patrimonio y libertad financiera.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-20">
