@@ -3,106 +3,117 @@ import { Send, ShieldCheck, Clock, Target } from 'lucide-react';
 
 export default function ContactForm() {
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
+    <section id="contacto" className="py-32 bg-cream relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-luxury-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 text-navy">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div>
-            <h2 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-              Tu primera propiedad de inversión está <span className="text-gold">más cerca</span> de lo que crees.
+            <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Privacidad & Elite</h4>
+            <h2 className="text-4xl lg:text-7xl font-serif font-bold mb-8 leading-tight">
+              Su Legado Comienza con una <span className="italic text-luxury-gold">Conversación.</span>
             </h2>
-            <p className="text-xl text-white/70 mb-12">
-              Agenda una asesoría gratuita hoy. Sin compromiso, sin letra chica y 100% personalizada a tu realidad financiera.
+            <p className="text-xl text-navy/60 mb-12 italic font-serif leading-relaxed">
+              Descubra por qué los perfiles más exigentes de Chile confían en nuestro diagnóstico patrimonial exclusivo.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                  <ShieldCheck className="text-gold" />
+            <div className="space-y-10">
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center text-luxury-gold">
+                  <ShieldCheck size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold">100% confidencial</h4>
-                  <p className="text-sm text-white/50">Tus datos están seguros con nosotros.</p>
+                  <h4 className="font-serif font-bold text-xl">Protocolo de Confidencialidad</h4>
+                  <p className="text-sm text-navy/40 uppercase tracking-widest font-bold">Resguardo absoluto de sus datos</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                  <Clock className="text-gold" />
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center text-luxury-gold">
+                  <Clock size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Contacto rápido</h4>
-                  <p className="text-sm text-white/50">Te llamamos en menos de 24 horas hábiles.</p>
+                  <h4 className="font-serif font-bold text-xl">Sesión de Alta Prioridad</h4>
+                  <p className="text-sm text-navy/40 uppercase tracking-widest font-bold">Respuesta en menos de 12 horas</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                  <Target className="text-gold" />
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center text-luxury-gold">
+                  <Target size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Cero presión</h4>
-                  <p className="text-sm text-white/50">Asesoría educativa, no venta forzada.</p>
+                  <h4 className="font-serif font-bold text-xl">Enfoque Consultivo</h4>
+                  <p className="text-sm text-navy/40 uppercase tracking-widest font-bold">Diagnóstico sin presión comercial</p>
                 </div>
               </div>
             </div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-charcoal p-10 lg:p-12 rounded-[3rem] border border-white/5 shadow-2xl"
+            className="editorial-card p-12 lg:p-16 rounded-[4rem] border-stone/50 shadow-2xl bg-white"
           >
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-bold text-white/50 uppercase tracking-widest mb-2">Nombre completo</label>
-                <input 
-                   type="text" 
-                   className="w-full bg-dark border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all" 
-                   placeholder="Ej: Juan Pérez"
-                />
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <label className="block text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] mb-3">Nombre Completo</label>
+                  <input 
+                     type="text" 
+                     className="w-full bg-cream border-b border-stone focus:border-luxury-gold outline-none py-4 transition-all text-navy font-serif" 
+                     placeholder="Ej: Rodrigo Fuentes"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] mb-3">Relación Patrimonial</label>
+                  <select className="w-full bg-cream border-b border-stone focus:border-luxury-gold outline-none py-4 transition-all text-navy font-serif appearance-none">
+                     <option>Inversionista Nuevo</option>
+                     <option>Portafolio Existente</option>
+                     <option>Búsqueda de Segunda Vivienda</option>
+                  </select>
+                </div>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              
+              <div className="grid md:grid-cols-2 gap-8">
                  <div>
-                   <label className="block text-sm font-bold text-white/50 uppercase tracking-widest mb-2">WhatsApp</label>
+                   <label className="block text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] mb-3">WhatsApp de Contacto</label>
                    <input 
                       type="tel" 
-                      className="w-full bg-dark border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all" 
+                      className="w-full bg-cream border-b border-stone focus:border-luxury-gold outline-none py-4 transition-all text-navy font-serif" 
                       placeholder="+56 9 ..."
                    />
                  </div>
                  <div>
-                   <label className="block text-sm font-bold text-white/50 uppercase tracking-widest mb-2">Email</label>
+                   <label className="block text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] mb-3">Email Institucional</label>
                    <input 
                       type="email" 
-                      className="w-full bg-dark border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all" 
-                      placeholder="tu@email.com"
+                      className="w-full bg-cream border-b border-stone focus:border-luxury-gold outline-none py-4 transition-all text-navy font-serif" 
+                      placeholder="r.fuentes@empresa.cl"
                    />
                  </div>
               </div>
+
               <div>
-                <label className="block text-sm font-bold text-white/50 uppercase tracking-widest mb-2">Renta líquida mensual</label>
-                <select className="w-full bg-dark border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all appearance-none">
-                   <option>Selecciona un rango</option>
-                   <option>Bajo $1.200.000</option>
-                   <option>$1.200.000 - $1.800.000</option>
-                   <option>$1.800.000 - $2.500.000</option>
-                   <option>Sobre $2.500.000</option>
+                <label className="block text-[10px] font-black text-navy/40 uppercase tracking-[0.2em] mb-3">Rango de Capital Sugerido</label>
+                <select className="w-full bg-cream border-b border-stone focus:border-luxury-gold outline-none py-4 transition-all text-navy font-serif appearance-none">
+                   <option>Seleccione su capacidad estimada</option>
+                   <option>Renta $1.5M - $2.5M</option>
+                   <option>Renta $2.5M - $5.0M</option>
+                   <option>Sobre $5.0M Líquido</option>
                 </select>
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full gold-gradient text-dark py-5 rounded-2xl font-black text-xl shadow-2xl flex items-center justify-center gap-3"
+                className="btn-primary w-full py-6 text-xl shadow-xl"
               >
-                Quiero mi asesoría gratuita
-                <Send size={20} />
+                SOLICITAR DIAGNÓSTICO PRIVADO
               </motion.button>
               
-              <p className="text-center text-xs text-white/30 italic">
-                Al enviar este formulario aceptas nuestra política de privacidad.
+              <p className="text-center text-[10px] text-navy/30 italic uppercase tracking-widest font-black">
+                Tratamiento de Datos bajo Estrictos Estándares de Privacidad
               </p>
             </form>
           </motion.div>

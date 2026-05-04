@@ -10,72 +10,75 @@ export default function Comparison() {
       banco: "Baja (0.5 - 2%)" 
     },
     { 
-      label: "Control sobre tu dinero", 
+      label: "Control sobre el activo", 
       activo: "Total y tangible", 
       afp: "Nulo antes de los 65", 
-      banco: "Medio" 
+      banco: "Moderado" 
     },
     { 
       label: "Protección vs Inflación", 
       activo: "Natural (vives en UF)", 
       afp: "Parcial", 
-      banco: "Moderada (solo si es UF)" 
+      banco: "Moderada" 
     },
     { 
-      label: "Herencia para familia", 
+      label: "Legado Familiar", 
       activo: "Propiedad completa", 
       afp: "Solo saldo restante", 
       banco: "Saldo cuenta" 
     },
     { 
       label: "Renta mensual pasiva", 
-      activo: "Mensual asegurada", 
-      afp: "Solo tras jubilar", 
+      activo: "Mensual garantizada", 
+      afp: "Solo tras jubilación", 
       banco: "Interés marginal" 
     }
   ];
 
   return (
-    <section className="py-24 bg-charcoal">
+    <section className="py-32 bg-stone/20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-4">¿Dónde está realmente tu dinero?</h2>
-          <p className="text-white/50 text-lg">Un comparación honesta entre los vehículos de inversión tradicionales en Chile.</p>
+        <div className="text-center mb-24">
+          <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Análisis de Mercado</h4>
+          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8">¿Dónde reside realmente su capital?</h2>
+          <p className="text-navy/60 text-lg max-w-2xl mx-auto leading-relaxed italic font-serif">
+            Una comparativa objetiva entre la inversión en activos inmobiliarios de elite y los instrumentos tradicionales.
+          </p>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border-separate border-spacing-y-4">
             <thead>
-              <tr className="text-sm font-bold uppercase tracking-widest text-white/30 px-6">
-                <th className="py-4 px-6">Criterio</th>
-                <th className="py-4 px-6 text-center bg-gold/10 rounded-t-2xl text-gold border-x border-t border-gold/30 relative">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 gold-gradient text-dark text-[10px] px-3 py-1 rounded-full font-black">RECOMENDADO</div>
-                  Propiedad Activo Más
+              <tr className="text-[10px] font-black uppercase tracking-[0.3em] text-navy/30">
+                <th className="py-8 px-10">Criterio de Evaluación</th>
+                <th className="py-8 px-10 text-center bg-navy text-white rounded-t-3xl relative">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 gold-gradient text-dark text-[10px] px-3 py-1 rounded-full font-black">SOLUCIÓN EXPERTA</div>
+                  Activo Más
                 </th>
-                <th className="py-4 px-6 text-center">AFP</th>
-                <th className="py-4 px-6 text-center">Depósito a Plazo</th>
+                <th className="py-8 px-10 text-center">AFP</th>
+                <th className="py-8 px-10 text-center">Depósito a Plazo</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, idx) => (
-                <tr key={idx} className="group">
-                  <td className="py-6 px-6 font-bold border-b border-white/5">{row.label}</td>
-                  <td className="py-6 px-6 text-center bg-gold/5 border-x border-gold/20 flex-col items-center justify-center">
+                <tr key={idx} className="group editorial-card">
+                  <td className="py-8 px-10 font-bold border-b border-stone/30 text-navy">{row.label}</td>
+                  <td className="py-8 px-10 text-center bg-navy/5 border-x border-navy/10">
                     <div className="flex flex-col items-center">
-                      <Check className="text-emerald mb-2" />
-                      <span className="text-sm font-bold">{row.activo}</span>
+                      <Check className="text-vibrant-green mb-3" size={20} />
+                      <span className="text-sm font-bold text-navy">{row.activo}</span>
                     </div>
                   </td>
-                  <td className="py-6 px-6 text-center border-b border-white/5">
+                  <td className="py-8 px-10 text-center border-b border-stone/30">
                     <div className="flex flex-col items-center">
-                      <AlertTriangle className="text-orange-500 mb-2" />
-                      <span className="text-sm opacity-60">{row.afp}</span>
+                      <AlertTriangle className="text-orange-600 mb-3" size={20} />
+                      <span className="text-sm text-navy/70 font-medium">{row.afp}</span>
                     </div>
                   </td>
-                  <td className="py-6 px-6 text-center border-b border-white/5">
+                  <td className="py-8 px-10 text-center border-b border-stone/30">
                     <div className="flex flex-col items-center">
-                      <X className="text-red-500 mb-2" />
-                      <span className="text-sm opacity-60">{row.banco}</span>
+                      <X className="text-red-600 mb-3" size={20} />
+                      <span className="text-sm text-navy/70 font-medium">{row.banco}</span>
                     </div>
                   </td>
                 </tr>
@@ -84,12 +87,12 @@ export default function Comparison() {
           </table>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-20 text-center">
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="gold-gradient text-dark px-12 py-5 rounded-2xl font-black text-xl shadow-2xl"
+            className="btn-primary mx-auto text-xl px-16 py-6"
           >
-            Quiero que mi dinero trabaje para mí
+            QUIERO QUE MI CAPITAL TRABAJE PARA MÍ
           </motion.button>
         </div>
       </div>

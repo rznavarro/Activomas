@@ -6,109 +6,106 @@ export default function Projects() {
     {
       id: 1,
       status: "Entrega Inmediata",
-      statusColor: "bg-emerald",
-      name: "Parque Bustamante II",
-      comuna: "Ñuñoa",
-      metro: "Santa Isabel L5",
-      price: "2.450",
-      cuota: "185.000",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=400"
+      statusColor: "bg-emerald-500",
+      name: "Villa Mediterránea",
+      comuna: "Lo Barnechea, Santiago",
+      metro: "Acceso Privado",
+      price: "12.450",
+      cuota: "885.000",
+      img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800"
     },
     {
       id: 2,
       status: "En Verde",
-      statusColor: "bg-orange-500",
-      name: "Edificio Conceptus",
-      comuna: "Santiago Centro",
-      metro: "Santa Ana L2",
-      price: "2.100",
-      cuota: "140.000",
-      img: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&q=80&w=400"
+      statusColor: "bg-luxury-gold",
+      name: "Residence Suite II",
+      comuna: "Las Condes, Santiago",
+      metro: "Metro El Golf",
+      price: "4.100",
+      cuota: "340.000",
+      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800"
     },
     {
       id: 3,
-      status: "En Blanco",
-      statusColor: "bg-blue-500",
-      name: "Legacy Tower",
-      comuna: "La Florida",
-      metro: "Vicente Valdés L4",
-      price: "2.800",
-      cuota: "210.000",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400"
+      status: "Exclusivo",
+      statusColor: "bg-navy",
+      name: "The Grand Tower",
+      comuna: "Pudahuel Sur",
+      metro: "Plan Maestro",
+      price: "8.800",
+      cuota: "610.000",
+      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
     }
   ];
 
   return (
-    <section id="proyectos" className="py-24 bg-dark">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+    <section id="proyectos" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 text-navy">
+        <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold mb-4">Stock exclusivo para inversionistas</h2>
-            <p className="text-white/50 text-lg">
-              Acuerdos directos con las mejores inmobiliarias de Chile. Precios, descuentos y condiciones que no encontrarás en otro lado.
+            <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Stock Exclusivo</h4>
+            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8 leading-tight">Oportunidades de<br />Inversión de Clase Mundial</h2>
+            <p className="text-navy/60 text-lg leading-relaxed">
+              Acuerdos directos con las mejores inmobiliarias de Chile. Precios, descuentos y condiciones que representan la cima del mercado.
             </p>
           </div>
           <motion.button 
             whileHover={{ x: 5 }}
-            className="text-gold font-bold flex items-center group whitespace-nowrap"
+            className="text-navy font-black text-xs uppercase tracking-[0.2em] flex items-center group whitespace-nowrap border-b-2 border-luxury-gold pb-2"
           >
-            Ver todos los proyectos
+            VER TODO EL PLAN MAESTRO
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </motion.button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              whileHover={{ y: -10 }}
-              className="bg-charcoal rounded-3xl overflow-hidden border border-white/5 hover:border-gold/20 transition-all flex flex-col"
+              whileHover={{ y: -15 }}
+              className="group cursor-pointer"
             >
-              <div className="relative h-64">
-                <img src={project.img} alt={project.name} className="w-full h-full object-cover" />
-                <div className={`absolute top-4 left-4 ${project.statusColor} text-dark text-[10px] font-black uppercase tracking-tighter px-3 py-1 rounded-full shadow-lg`}>
+              <div className="relative aspect-[4/5] mb-8 overflow-hidden rounded-[2rem] shadow-sm group-hover:shadow-2xl transition-all duration-500">
+                <img src={project.img} alt={project.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className={`absolute top-6 left-6 ${project.statusColor} text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg`}>
                   {project.status}
                 </div>
               </div>
-              <div className="p-8 flex-1 flex flex-col">
-                <h3 className="text-2xl font-bold mb-1">{project.name}</h3>
-                <div className="flex items-center text-white/50 text-sm mb-4">
-                  <MapPin size={14} className="mr-1" /> {project.comuna}
+              <div className="px-2">
+                <div className="flex items-center text-luxury-gold text-[10px] font-black uppercase tracking-[0.2em] mb-3">
+                  <MapPin size={12} className="mr-2" /> {project.comuna}
                 </div>
+                <h3 className="text-3xl font-serif font-bold text-navy mb-4 group-hover:text-luxury-gold transition-colors">{project.name}</h3>
                 
-                <div className="flex items-center gap-3 bg-white/5 p-3 rounded-xl mb-6">
-                  <Train size={18} className="text-gold" />
-                  <span className="text-sm font-medium">{project.metro}</span>
+                <div className="flex items-center gap-3 border-y border-stone/50 py-4 mb-6">
+                  <Train size={16} className="text-navy/30" />
+                  <span className="text-xs font-bold tracking-widest text-navy/60">{project.metro}</span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex justify-between items-center">
                   <div>
-                    <p className="text-xs text-white/40 uppercase tracking-widest font-bold">Desde</p>
-                    <p className="text-xl font-display font-bold text-gold">UF {project.price}</p>
+                    <p className="text-[10px] text-navy/40 uppercase tracking-widest font-bold mb-1">Precio</p>
+                    <p className="text-2xl font-serif font-bold text-navy">UF {project.price}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-white/40 uppercase tracking-widest font-bold text-right">Cuota Est.</p>
-                    <p className="text-xl font-display font-bold text-white">${project.cuota}</p>
+                    <p className="text-[10px] text-navy/40 uppercase tracking-widest font-bold mb-1">Desde</p>
+                    <p className="text-2xl font-serif font-bold text-navy">${project.cuota}</p>
                   </div>
                 </div>
-
-                <button className="w-full py-4 border border-white/10 rounded-xl font-bold hover:bg-white hover:text-dark transition-all mt-auto">
-                  Ver detalles del proyecto
-                </button>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="bg-charcoal/50 border border-white/5 p-8 rounded-3xl flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="flex-1">
-            <p className="text-lg font-medium text-white/90">
-              ¿El pie te preocupa? En muchos proyectos se paga en cuotas y el dividendo lo cubre el arrendatario.
-            </p>
-          </div>
-          <button className="gold-gradient text-dark px-8 py-4 rounded-xl font-bold shadow-xl">
-             Simular capacidad de crédito
-          </button>
+        <div className="bg-navy p-12 lg:p-20 rounded-[3rem] text-center relative overflow-hidden shadow-2xl">
+           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
+           <div className="relative z-10 max-w-3xl mx-auto">
+             <h3 className="text-3xl lg:text-4xl font-serif font-bold text-white mb-6">¿Preparado para asegurar su legacy?</h3>
+             <p className="text-white/60 mb-10 text-lg">Nuestros especialistas le asistirán en la simulación de su capacidad crediticia y la selección de activos estratégicos.</p>
+             <button className="btn-primary mx-auto text-xl px-12">
+               SOLICITAR ASESORÍA PRIVADA
+             </button>
+           </div>
         </div>
       </div>
     </section>

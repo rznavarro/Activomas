@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -13,52 +13,59 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Proyectos', href: '#proyectos' },
-    { name: 'Cómo invertir', href: '#proceso' },
-    { name: 'Testimonios', href: '#testimonios' },
-    { name: 'Blog', href: '#' },
+    { name: 'VILLAS', href: '#proyectos' },
+    { name: 'PLAN MAESTRO', href: '#proceso' },
+    { name: 'ESTILO DE VIDA', href: '#testimonios' },
+    { name: 'SOBRE NOSOTROS', href: '#' },
   ];
 
   return (
     <nav 
       id="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-dark/90 backdrop-blur-md py-3 shadow-xl border-b border-white/5' : 'bg-transparent py-5'
+        scrolled ? 'bg-white py-3 shadow-md border-b border-stone' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 gold-gradient rounded-full flex items-center justify-center font-bold text-dark text-xl">A</div>
-          <span className="font-display font-bold text-xl tracking-tight">
-            ACTIVO <span className="text-gold">MÁS</span>
+        <div className="flex items-center">
+          <span className={`font-serif text-2xl tracking-widest uppercase ${scrolled ? 'text-navy' : 'text-white md:text-navy'}`}>
+            ACTIVO <span className={scrolled ? 'text-luxury-gold' : 'text-white md:text-luxury-gold'}>MÁS</span>
           </span>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-sm font-medium text-white/70 hover:text-gold transition-colors"
+        <div className="hidden lg:flex items-center space-x-10">
+          <div className="flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                className={`text-xs font-bold tracking-[0.2em] transition-colors ${scrolled ? 'text-navy/70 hover:text-navy' : 'text-white/80 hover:text-white md:text-navy/70 md:hover:text-navy'}`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center space-x-6 border-l border-stone pl-8">
+             <div className="flex items-center space-x-1 cursor-pointer group">
+               <Globe size={14} className={scrolled ? 'text-navy' : 'text-white md:text-navy'} />
+               <span className={`text-[10px] font-bold tracking-widest ${scrolled ? 'text-navy' : 'text-white md:text-navy'}`}>ESPAÑOL</span>
+             </div>
+             <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-vibrant-green text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg"
             >
-              {link.name}
-            </a>
-          ))}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="gold-gradient text-dark px-6 py-2.5 rounded-lg font-bold text-sm flex items-center group"
-          >
-            Agenda tu asesoría gratuita
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+              ASISTENCIA
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="lg:hidden text-white"
+          className={`lg:hidden ${scrolled ? 'text-navy' : 'text-white md:text-navy'}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -70,20 +77,20 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden bg-dark border-b border-white/10 absolute top-full left-0 right-0 p-6 flex flex-col space-y-6"
+          className="lg:hidden bg-white border-b border-stone absolute top-full left-0 right-0 p-8 flex flex-col space-y-6 shadow-2xl"
         >
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-lg font-medium text-white"
+              className="text-sm font-bold tracking-widest text-navy"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <button className="gold-gradient text-dark w-full py-4 rounded-lg font-bold">
-            Agenda tu asesoría gratuita
+          <button className="bg-vibrant-green text-white w-full py-4 rounded-full font-bold uppercase tracking-widest">
+            CONTACTAR EXPERTO
           </button>
         </motion.div>
       )}

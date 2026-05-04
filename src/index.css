@@ -1,32 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Poppins", sans-serif;
+  --font-serif: "Playfair Display", serif;
   
-  --color-gold: #C9A84C;
-  --color-dark: #0D0D0D;
-  --color-charcoal: #1A1A1A;
-  --color-emerald: #1DB954;
+  --color-luxury-gold: #967E4A;
+  --color-navy: #0F172A;
+  --color-cream: #FCFAF7;
+  --color-stone: #E8E4DD;
+  --color-vibrant-green: #15803D;
 }
 
 @layer base {
   body {
-    @apply bg-dark text-white font-sans antialiased;
+    @apply bg-cream text-navy font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif text-navy;
   }
 }
 
 .gold-gradient {
-  background: linear-gradient(135deg, #C9A84C 0%, #A68A3D 100%);
+  background: linear-gradient(135deg, #B2925B 0%, #D4BC82 100%);
 }
 
-.text-gold-gradient {
-  background: linear-gradient(135deg, #C9A84C 0%, #E5C164 100%);
+.text-navy-gradient {
+  background: linear-gradient(135deg, #1A2B4C 0%, #2D4A7D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.glass-card {
-  @apply bg-charcoal/50 backdrop-blur-sm border border-white/10;
+.editorial-card {
+  @apply bg-white border border-stone/50 shadow-sm transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-vibrant-green text-white px-8 py-4 rounded-full font-bold transition-all hover:brightness-110 active:scale-95 shadow-lg flex items-center justify-center;
+}
+
+.btn-outline {
+  @apply border-2 border-navy text-navy px-8 py-4 rounded-full font-bold transition-all hover:bg-navy hover:text-white active:scale-95 flex items-center justify-center;
 }

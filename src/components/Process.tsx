@@ -30,16 +30,17 @@ export default function Process() {
   ];
 
   return (
-    <section id="proceso" className="py-24 bg-charcoal">
+    <section id="proceso" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-4">Te acompañamos en cada paso</h2>
-          <p className="text-white/50 text-lg">Del sueño a la renta mensual, sin fricciones.</p>
+        <div className="text-center mb-24">
+          <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">El Camino al Exito</h4>
+          <h2 className="text-4xl lg:text-6xl font-serif font-bold mb-6">Acompañerle es Nuestro Compromiso</h2>
+          <p className="text-navy/60 text-lg italic font-serif">Del análisis patrimonial a la renta mensual garantizada.</p>
         </div>
 
-        <div className="relative mb-20">
+        <div className="relative mb-24">
           {/* Connector Line (Desktop) */}
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-white/10" />
+          <div className="hidden lg:block absolute top-[52px] left-0 w-full h-px bg-stone" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {steps.map((step, idx) => (
@@ -51,18 +52,17 @@ export default function Process() {
                 transition={{ delay: idx * 0.2 }}
                 className="relative z-10"
               >
-                <div className="w-24 h-24 bg-dark border-4 border-charcoal rounded-3xl flex items-center justify-center mb-8 mx-auto lg:mx-0 shadow-xl group hover:border-gold/30 transition-all">
-                  <div className="absolute -top-3 -right-3 w-10 h-10 gold-gradient text-dark rounded-xl flex items-center justify-center font-black text-lg">
+                <div className="w-28 h-28 bg-white border border-stone/50 rounded-full flex items-center justify-center mb-10 mx-auto lg:mx-0 shadow-sm relative group hover:border-luxury-gold transition-all duration-500">
+                  <div className="absolute -top-1 -right-1 w-10 h-10 bg-navy text-white rounded-full flex items-center justify-center font-serif italic text-lg shadow-lg">
                     {step.num}
                   </div>
-                  {/* Icon size logic */}
-                  <div className="scale-125">
+                  <div className="text-luxury-gold scale-125">
                     {step.icon}
                   </div>
                 </div>
-                <div className="text-center lg:text-left">
-                  <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">
+                <div className="text-center lg:text-left px-4 lg:px-0">
+                  <h3 className="text-2xl font-serif font-bold mb-4">{step.title}</h3>
+                  <p className="text-navy/60 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -73,11 +73,10 @@ export default function Process() {
 
         <div className="text-center">
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            className="gold-gradient text-dark px-10 py-5 rounded-2xl font-black text-xl shadow-2xl flex items-center mx-auto"
+            whileHover={{ scale: 1.05 }}
+            className="btn-primary mx-auto text-xl px-12"
           >
-            Quiero empezar ahora
-            <ArrowRight className="ml-3" />
+            INICIAR DIAGNÓSTICO PATRIMONIAL
           </motion.button>
         </div>
       </div>

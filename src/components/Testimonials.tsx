@@ -1,83 +1,76 @@
 import { motion } from 'motion/react';
-import { Play, Star } from 'lucide-react';
+import { Play, Star, Quote } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
     {
       name: "Rodrigo Fuentes",
       city: "Antofagasta",
-      properties: "3 propiedades",
-      text: "Empecé con dudas por el pie, pero con la asesoría entendí que era posible pagar en cuotas. Hoy mis 3 departamentos se pagan solos y me dan una tranquilidad que antes no tenía.",
+      properties: "3 Propiedades",
+      text: "La asesoría superó mis expectativas. Entendí que la inversión en activos inmobiliarios de alto perfil es el único camino real hacia la libertad financiera sin comprometer mi tiempo.",
       img: "https://i.pravatar.cc/150?u=rod",
       hasVideo: true
     },
     {
       name: "Catalina Muñoz",
       city: "Santiago",
-      properties: "1 propiedad",
-      text: "Buscaba asegurar mi propia jubilación sin depender de la AFP. El diagnósitico financiero fue clave para dar el paso con confianza.",
+      properties: "Elite Member",
+      text: "Buscaba blindar mi futuro. El diagnóstico patrimonial me permitió seleccionar activos exclusivos que ya están generando plusvalía sobre el promedio del mercado.",
       img: "https://i.pravatar.cc/150?u=cat",
-      hasVideo: false
-    },
-    {
-      name: "Sebastián Reyes",
-      city: "Concepción",
-      properties: "5 propiedades",
-      text: "Activo Más no solo te vende el depto, te enseña a ser inversionista. El equipo legal y comercial me quitó todo el peso de los trámites de encima.",
-      img: "https://i.pravatar.cc/150?u=seb",
-      hasVideo: true
-    },
-    {
-      name: "Andrea Lagos",
-      city: "Viña del Mar",
-      properties: "2 propiedades",
-      text: "Como madre, mi prioridad es el patrimonio de mis hijos. Saber que ya tienen estos activos a su nombre es la mejor decisión que he tomado.",
-      img: "https://i.pravatar.cc/150?u=and",
       hasVideo: false
     }
   ];
 
   return (
-    <section id="testimonios" className="py-24 bg-dark">
+    <section id="testimonios" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-4">Más de 3.000 historias reales.</h2>
-          <p className="text-white/50 text-lg">Personas que ya tomaron el control de su futuro financiero.</p>
+        <div className="text-center mb-24">
+          <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Legacy & Testimonios</h4>
+          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8">Historias de Exito Real</h2>
+          <p className="text-navy/60 text-lg italic font-serif">Inversionistas que han elevado su estándar de vida y patrimonial.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-16 mb-24">
           {testimonials.map((testimonial, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ y: -5 }}
-              className="bg-charcoal p-8 rounded-3xl border border-white/5 flex gap-6 relative group"
+              whileHover={{ y: -10 }}
+              className="editorial-card p-12 lg:p-16 rounded-[4rem] relative group border-stone/30"
             >
-              <div className="flex-shrink-0 relative">
-                <img src={testimonial.img} className="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" alt={testimonial.name} />
-                {testimonial.hasVideo && (
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center shadow-lg">
-                    <Play size={12} className="fill-dark text-dark ml-0.5" />
+              <Quote className="absolute top-10 right-10 text-stone/20" size={60} />
+              <div className="flex flex-col md:flex-row gap-10 items-center md:items-start relative z-10 text-center md:text-left">
+                <div className="flex-shrink-0 relative">
+                  <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-stone/20">
+                    <img src={testimonial.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt={testimonial.name} />
                   </div>
-                )}
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={12} className="text-gold fill-gold" />)}
+                  {testimonial.hasVideo && (
+                    <div className="absolute -bottom-2 right-2 w-10 h-10 bg-vibrant-green rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
+                      <Play size={16} className="fill-white text-white ml-0.5" />
+                    </div>
+                  )}
                 </div>
-                <h4 className="text-xl font-bold">{testimonial.name}</h4>
-                <p className="text-gold text-xs font-bold uppercase tracking-widest mb-4">{testimonial.city} • {testimonial.properties}</p>
-                <p className="text-white/70 italic leading-relaxed text-sm">
-                  "{testimonial.text}"
-                </p>
+                <div>
+                  <div className="flex justify-center md:justify-start gap-1 mb-6">
+                    {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-luxury-gold fill-luxury-gold" />)}
+                  </div>
+                  <h4 className="text-3xl font-serif font-bold text-navy mb-2">{testimonial.name}</h4>
+                  <p className="text-luxury-gold text-[10px] font-black uppercase tracking-[0.3em] mb-6">{testimonial.city} • {testimonial.properties}</p>
+                  <p className="text-navy/60 italic leading-relaxed text-lg font-serif">
+                    "{testimonial.text}"
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
-          <button className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
-            Ver todos los testimonios en video
-          </button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="text-navy font-bold flex items-center mx-auto hover:text-luxury-gold transition-colors group uppercase tracking-widest text-[10px] border-b-2 border-luxury-gold pb-2"
+          >
+            VER TODAS LAS SESIONES EN VIDEO
+          </motion.button>
         </div>
       </div>
     </section>
