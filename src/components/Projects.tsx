@@ -39,13 +39,13 @@ export default function Projects() {
   ];
 
   return (
-    <section id="proyectos" className="py-32 bg-white">
+    <section id="proyectos" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-navy">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
           <div className="max-w-2xl">
             <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Stock Exclusivo</h4>
-            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">Oportunidades de Inversión <br />de Clase Mundial</h2>
-            <p className="text-navy/70 text-base leading-relaxed">
+            <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-4 leading-tight">Oportunidades de Inversión <br />de Clase Mundial</h2>
+            <p className="text-navy/70 text-sm lg:text-base leading-relaxed">
               Acuerdos directos con las mejores inmobiliarias. Precios, descuentos y condiciones que representan la cima del mercado.
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function Projects() {
         <div className="bg-navy p-12 lg:p-20 rounded-[3rem] text-center relative overflow-hidden shadow-2xl">
            <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
            <div className="relative z-10 max-w-3xl mx-auto">
-             <h3 className="text-3xl lg:text-4xl font-serif font-bold text-white mb-6">¿Preparado para asegurar su legacy?</h3>
+             <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-6">¿Preparado para asegurar su legacy?</h3>
              <p className="text-white/60 mb-10 text-lg">Nuestros especialistas le asistirán en la simulación de su capacidad crediticia y la selección de activos estratégicos.</p>
              <button className="btn-primary mx-auto text-xl px-12">
                SOLICITAR ASESORÍA PRIVADA

@@ -22,12 +22,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonios" className="py-32 bg-white">
+    <section id="testimonios" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Legacy & Testimonios</h4>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6">Historias de Éxito Real</h2>
-          <p className="text-navy/70 text-base italic font-serif">Inversionistas que han elevado su estándar de vida y patrimonial.</p>
+          <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-4">Historias de Éxito Real</h2>
+          <p className="text-navy/70 text-sm lg:text-base italic font-serif">Inversionistas que han elevado su estándar de vida y patrimonial.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">

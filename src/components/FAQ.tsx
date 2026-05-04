@@ -33,12 +33,12 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-24">
-          <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Resolviendo Inquietudes</h4>
-          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-navy mb-8">Consultas Frecuentes</h2>
-          <p className="text-navy/60 text-lg italic font-serif">Claridad absoluta en su proceso de inversión.</p>
+        <div className="text-center mb-16">
+          <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Resolviendo Inquietudes</h4>
+          <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-4">Consultas Frecuentes</h2>
+          <p className="text-navy/70 text-sm italic font-serif">Claridad absoluta en su proceso de inversión.</p>
         </div>
 
         <div className="space-y-6">
@@ -51,7 +51,7 @@ export default function FAQ() {
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                 className="w-full p-8 text-left flex justify-between items-center group"
               >
-                <span className={`font-serif font-bold text-xl lg:text-2xl ${openIdx === idx ? 'text-navy' : 'text-navy/80'}`}>{faq.q}</span>
+                <span className={`font-serif font-bold text-lg lg:text-xl ${openIdx === idx ? 'text-navy' : 'text-navy/80'}`}>{faq.q}</span>
                 <ChevronDown className={`transition-transform duration-500 ${openIdx === idx ? 'rotate-180 text-luxury-gold' : 'text-stone group-hover:text-navy'}`} />
               </button>
               {openIdx === idx && (
@@ -59,7 +59,7 @@ export default function FAQ() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   transition={{ duration: 0.4 }}
-                  className="px-8 pb-8 text-navy/60 leading-relaxed text-lg italic font-serif"
+                  className="px-8 pb-8 text-navy/60 leading-relaxed text-base italic font-serif"
                 >
                   "{faq.a}"
                 </motion.div>

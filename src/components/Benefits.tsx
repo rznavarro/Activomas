@@ -36,14 +36,14 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-32 bg-stone/20 overflow-hidden relative">
+    <section className="py-24 bg-stone/20 overflow-hidden relative">
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-luxury-gold/5 blur-[150px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h4 className="text-vibrant-green font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Valor Tangible</h4>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">La Inversión Inmobiliaria: <br />Ladrillos que Construyen Libertad</h2>
-          <p className="text-navy/70 text-base italic font-serif">Seis pilares fundamentales para blindar su futuro y su legado.</p>
+          <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-6 leading-tight">La Inversión Inmobiliaria: <br />Ladrillos que Construyen Libertad</h2>
+          <p className="text-navy/70 text-sm lg:text-base italic font-serif">Seis pilares fundamentales para blindar su futuro y su legado.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

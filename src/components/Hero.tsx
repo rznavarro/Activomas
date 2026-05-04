@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
+    <section id="hero" className="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
       {/* Editorial Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -20,14 +20,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-navy font-serif italic text-lg lg:text-xl mb-6">
+            <h2 className="text-navy font-serif italic text-base lg:text-lg mb-4">
               Aprovecha la oportunidad:
             </h2>
-            <h1 className="text-navy font-serif font-bold text-4xl lg:text-6xl leading-tight mb-8 tracking-tight uppercase">
+            <h1 className="text-navy font-serif font-bold text-xl lg:text-3xl leading-tight mb-6 tracking-tight">
               En la vida te <br />enseñaron a <br />trabajar. <br />
-              <span className="text-luxury-gold italic lg:text-navy lg:not-italic">Nosotros te enseñamos a invertir.</span>
+              <span className="text-luxury-gold italic">Nosotros te enseñamos a invertir.</span>
             </h1>
-            <p className="text-navy font-bold text-xs lg:text-sm max-w-lg mb-10 uppercase tracking-[0.2em] leading-relaxed">
+            <p className="text-navy font-bold text-[10px] lg:text-xs max-w-md mb-8 uppercase tracking-[0.2em] leading-relaxed opacity-80">
               Más de 3.000 inversionistas ya aseguran su jubilación, patrimonio y libertad financiera.
             </p>
 

@@ -26,7 +26,7 @@ export default function TargetAudience() {
   ];
 
   return (
-    <section className="py-32 bg-cream">
+    <section className="py-24 bg-cream">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +34,10 @@ export default function TargetAudience() {
           viewport={{ once: true }}
         >
           <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Perfil de Inversión</h4>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6">
+          <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-4">
             ¿Es ésta su oportunidad?
           </h2>
-          <p className="text-navy/80 text-base mb-16 max-w-2xl mx-auto italic font-serif leading-relaxed">
+          <p className="text-navy/80 text-sm lg:text-base mb-12 max-w-2xl mx-auto italic font-serif leading-relaxed">
             "La inversión inmobiliaria no es solo para millonarios, es para quienes deciden construir su libertad hoy."
           </p>
         </motion.div>

@@ -3,18 +3,18 @@ import { Send, ShieldCheck, Clock, Target } from 'lucide-react';
 
 export default function ContactForm() {
   return (
-    <section id="contacto" className="py-32 bg-cream relative overflow-hidden">
+    <section id="contacto" className="py-24 bg-cream relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-luxury-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-navy">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div>
-            <h4 className="text-luxury-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Privacidad & Elite</h4>
-            <h2 className="text-4xl lg:text-7xl font-serif font-bold mb-8 leading-tight">
+            <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Privacidad & Elite</h4>
+            <h2 className="text-2xl lg:text-3xl font-serif font-bold mb-6 leading-tight">
               Su Legado Comienza con una <span className="italic text-luxury-gold">Conversación.</span>
             </h2>
-            <p className="text-xl text-navy/60 mb-12 italic font-serif leading-relaxed">
+            <p className="text-lg text-navy/60 mb-10 italic font-serif leading-relaxed">
               Descubra por qué los perfiles más exigentes de Chile confían en nuestro diagnóstico patrimonial exclusivo.
             </p>
 

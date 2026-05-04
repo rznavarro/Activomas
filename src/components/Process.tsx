@@ -30,12 +30,12 @@ export default function Process() {
   ];
 
   return (
-    <section id="proceso" className="py-32 bg-white">
+    <section id="proceso" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h4 className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-4">El Camino al Éxito</h4>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-navy mb-6">Acompañarle es Nuestro Compromiso</h2>
-          <p className="text-navy/70 text-base italic font-serif">Del análisis patrimonial a la renta mensual garantizada.</p>
+          <h2 className="text-xl lg:text-2xl font-serif font-bold text-navy mb-4">Acompañarle es Nuestro Compromiso</h2>
+          <p className="text-navy/70 text-sm lg:text-base italic font-serif">Del análisis patrimonial a la renta mensual garantizada.</p>
         </div>
 
         <div className="relative mb-24">
